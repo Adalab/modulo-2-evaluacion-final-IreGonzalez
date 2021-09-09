@@ -1,0 +1,34 @@
+.form{
+    display: flex;
+    &__input{
+        background-color: lightgray;
+        height: 25px;
+        text-align: center;
+        color: darkslategray;
+        ::placeholder{
+            color: lightslategray;
+        }
+    }
+    &__button{
+        background-color: grey;
+        padding: 10px;
+    }
+}
+
+.list{
+    display: grid;
+    &__elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+        &--image{
+            height: 140px;
+            width: 100px;
+            background-color: ivory;
+        }
+        &--series{
+            margin-bottom: 20px;
+        }
+    }
+}
