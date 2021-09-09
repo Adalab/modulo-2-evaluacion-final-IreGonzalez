@@ -1,8 +1,16 @@
 [X] ESTRUCTURA BÁSICA
+[] RECORDATORIOS ESENCIALES
+    [] Quitar los console.log()
+    [] Hacer COMMITS cada poco tiempo
+    [] Trabajar en testing y mergear SOLO cuando funcione algo
+    [] Funciones ARROW llamadas handle...
+    [] Mejorar el README
+    []Añadir que se active la búsqueda con INTRO
 [] BÚSQUEDA
     [] Hacer la petición al servidor - FETCH
         [] Crear un listado que esté disponible para utilizarlo en caso de ser necesario
         [] Recoger únicamente la información que necesitamos
+            ...show.name.image(medium/original)
     [] Búsqueda de serie
         [] Recoger el texto introducido por la usuaria -Input
         [] Enviar la petición de la usuaria a la lista creada

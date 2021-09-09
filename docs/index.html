@@ -3,63 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Buscador de Series</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="icon" href="./assets/images/favicon.png" />
   </head>
 
   <body>
     <div class="page">
-      <header class="page__header">
-        <img src="./assets/images/logo-adalab.png" alt="Adalab">
-        <h1>Bienvenidos a Adalab</h1>
+      <header>
+          <h1 class="header__title">
+              Buscador de series
+          </h1>
       </header>
 
-      <main class="page__main">
-        <h2>Este es el starter kit de Adalab</h2>
-        <p>Lo usamos para aprender:</p>
-        <ul class="main__list">
-          <li>Sass</li>
-          <li>HTML partials</li>
-          <li>Gulp</li>
-          <li>y muchas cosas más</li>
-        </ul>
-        <p>Si quieres saber cúales son las rutas correctas para:</p>
-        <ul class="main__list">
-          <li>
-            una <code class="code">&lt;img /&gt;</code> mira el fichero
-            <code class="code">./src/html/partials/header.html</code>.
-          </li>
-          <li>
-            y para un <code class="code">background-image</code> mira el fichero
-            <code class="code">./src/html/scss/layout/_page.scss</code>.
-          </li>
-        </ul>
-        <p>
-          Si quieres saber cómo usar un partial HTML dentro de otro partial, busca en la carperta
-          <code class="code">./src/html/index.html</code> y
-          <code class="code">./src/html/partials/main.html</code>, y verás cómo estamos creando estos
-          enlaces:
-        </p>
-        <ul class="main__list">
-          <li>
-            <a class="link__adalab" href="https://adalab.es">Adalab</a>
-
-          </li>
-          <li>
-            <a class="" href="./more-info.html">Más info del starter kit</a>
-
-          </li>
-        </ul>
+      <main>
+          <form class="form js_form" action="">
+              <input class="form__input js_input" type="text" placeholder=" Escribe aquí tu serie">
+              <input class="form__button js_button" type="button" value="Search">
+          </form>
+          <article class="series">
+              <ul class="list js_list">
+                  <li class="list__elements js_elements">
+                      <img class="list__elements--image js_image" src="" alt="Cartel de la serie">
+                      <p class="list__elements--series js_series">Título de la serie</p>
+                  </li>
+                  <li class="list__elements js_elements">
+                      <img class="list__elements--image js_image" src="" alt="Cartel de la serie">
+                      <p class="list__elements--series js_series">Título de la serie</p>
+                  </li>
+                  <li class="list__elements js_elements">
+                      <img class="list__elements--image js_image" src="" alt="Cartel de la serie">
+                      <p class="list__elements--series js_series">Título de la serie</p>
+                  </li>
+              </ul>
+              <ul class="favourites js_favourites">
+                  <li class="favourites__elements js_favElements">
+                      <img class="favourites__elements--image js_favImage" src="" alt="Cartel de la serie">
+                      <p class="favourites__elements--series js_favSeries">Título de la serie</p>
+                      <i class="favourites__elements--button">O</i>
+                  </li>
+                  <li class="favourites__elements js_favElements">
+                      <img class="favourites__elements--image js_favImage" src="" alt="Cartel de la serie">
+                      <p class="favourites__elements--series js_favSeries">Título de la serie</p>
+                      <i class="favourites__elements--button">O</i>
+                  </li>
+                  <li class="favourites__elements js_favElements">
+                      <img class="favourites__elements--image js_favImage" src="" alt="Cartel de la serie">
+                      <p class="favourites__elements--series js_favSeries">Título de la serie</p>
+                      <i class="favourites__elements--button">O</i>
+                  </li>
+              </ul>
+          </article>
       </main>
 
-      <footer class="page__footer">
-        <small>
-          &copy; Todos los derechos reservados
-          <a class="link__adalab" href="https://adalab.es">Adalab</a>
-
-        </small>
+      <footer>
+          <div class="footer">
+              <h6>&copy;2021</h6>
+              <h6>By IreGonzalez To Adalab</h6>
+            </div>
       </footer>
 
     </div>
