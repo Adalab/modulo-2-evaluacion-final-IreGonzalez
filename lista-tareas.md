@@ -6,19 +6,20 @@
     [] Funciones ARROW llamadas handle...
     [] Mejorar el README
     []Añadir que se active la búsqueda con INTRO
-[] BÚSQUEDA
+    [] Dividir el JS
+[X] BÚSQUEDA
     [X] Hacer la petición al servidor - FETCH
-        [] Crear un listado que esté disponible para utilizarlo en caso de ser necesario
-        [] Recoger únicamente la información que necesitamos
+        [X] Crear un listado que esté disponible para utilizarlo en caso de ser necesario
+        [X] Recoger únicamente la información que necesitamos
             ...show.name.image(medium/original)
-    [] Búsqueda de serie
+    [X] Búsqueda de serie
         [X] Recoger el texto introducido por la usuaria -Input
-        [] Enviar la petición de la usuaria a la lista creada
-        [] Recoger la información seleccionada
-        [] Pintar los datos en el lugar correspondiente
-            [] Crear el html necesario a través de js
-            [] Si poseen imagen propia, expraerla y pintarla
-            [] Si no poseen imagen establecer una imagen por defecto
+        [X] Enviar la petición de la usuaria a la lista creada
+        [X] Recoger la información seleccionada
+        [X] Pintar los datos en el lugar correspondiente
+            [X] Crear el html necesario a través de js
+            [X] Si poseen imagen propia, expraerla y pintarla
+            [X] Si no poseen imagen establecer una imagen por defecto
 [] FAVORITOS
     [] Seleccionar serie
         [] Escuchar el evento click
