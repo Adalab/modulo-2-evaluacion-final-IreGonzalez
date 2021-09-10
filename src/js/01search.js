@@ -14,10 +14,10 @@ function paintSeries() {
         const id = search.show.id;
         const title = search.show.name;
         const image = search.show.image;
-        const defaultImage = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV';
         html += `<li class="list__elements js_elements" id= "${id}">`;
         if (image === null) {
-            html += `<img class="list__elements--image js_image" src="${defaultImage}" alt="Cartel de la serie"></img>`;
+            const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
+            html += `<img class="list__elements--image js_image" src="${image}" alt="Cartel de la serie"></img>`;
         }
         else {
             html += `<img class="list__elements--image js_image" src="${image.original}" alt="Cartel de la serie"></img>`;
