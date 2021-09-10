@@ -1,5 +1,7 @@
 
-//SEARCH
+//FUNCTIONS
+
+//Search
 
 function urlCreator() {
     const url = `//api.tvmaze.com/search/shows?q=${input.value}`;
@@ -7,7 +9,6 @@ function urlCreator() {
 };
 
 function paintSeries() {
-    let html = '';
     for (const search of series) {
         console.log(search);
         const id = search.show.id;
@@ -25,6 +26,8 @@ function paintSeries() {
         html += `</li>`;
     }
     seriesList.innerHTML = html;
+    //solo puede ser ejecutada si se ha pintado previamente el html
+    listenerSelection()
 };
 
 function handleSearchSeries(event) {

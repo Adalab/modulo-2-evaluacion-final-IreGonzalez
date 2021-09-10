@@ -5,3 +5,4 @@
 buttonSearch.addEventListener('click', handleSearchSeries);
 
 //favorites
+

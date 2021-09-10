@@ -1,12 +1,13 @@
 [X] ESTRUCTURA BÁSICA
 [] RECORDATORIOS ESENCIALES
     [] Quitar los console.log()
+    [] Limpiar comentarios de la rama Master
     [] Hacer COMMITS cada poco tiempo
-    [] Trabajar en testing y mergear SOLO cuando funcione algo
+    [X] Trabajar en testing y mergear SOLO cuando funcione algo
     [] Funciones ARROW llamadas handle...
     [] Mejorar el README
-    []Añadir que se active la búsqueda con INTRO
-    [] Dividir el JS
+    [X]Añadir que se active la búsqueda con INTRO(se activa por defecto)
+    [X] Dividir el JS
 [X] BÚSQUEDA
     [X] Hacer la petición al servidor - FETCH
         [X] Crear un listado que esté disponible para utilizarlo en caso de ser necesario
@@ -22,7 +23,7 @@
             [X] Si no poseen imagen establecer una imagen por defecto
 [] FAVORITOS
     [] Seleccionar serie
-        [] Escuchar el evento click
+        [X] Escuchar el evento click
         [] Debe realizar dos tareas
             [] Añadir serie a la lista favoritos
                 [] Comprobar si está o no en esa lista
