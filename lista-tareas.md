@@ -7,12 +7,12 @@
     [] Mejorar el README
     []Añadir que se active la búsqueda con INTRO
 [] BÚSQUEDA
-    [] Hacer la petición al servidor - FETCH
+    [X] Hacer la petición al servidor - FETCH
         [] Crear un listado que esté disponible para utilizarlo en caso de ser necesario
         [] Recoger únicamente la información que necesitamos
             ...show.name.image(medium/original)
     [] Búsqueda de serie
-        [] Recoger el texto introducido por la usuaria -Input
+        [X] Recoger el texto introducido por la usuaria -Input
         [] Enviar la petición de la usuaria a la lista creada
         [] Recoger la información seleccionada
         [] Pintar los datos en el lugar correspondiente
