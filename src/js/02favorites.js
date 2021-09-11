@@ -2,17 +2,20 @@
 
 function handleFavSelect(event) {
     //Escuchar dónde se hace click y añadirlo al contenedor de favoritos
-    const userSelectedFav = parseInt(event.currentTarget.id);
-    console.log(userSelectedFav);
+    const userSelectedFavId = parseInt(event.currentTarget.id);
+    console.log(userSelectedFavId);
     //Que el currentTarget del ob.clikado debe ser igual al encontrado en la lista series
     const favouriteSelection = series.find(select => {
-        return select.show.id === userSelectedFav
+        return select.show.id === userSelectedFavId
     });
     console.log(favouriteSelection);
+
     //Compruebo si ya está en la lista
     const favouritesFound = favourites.findIndex(serieFav => {
-        return serieFav.id === userSelectedFav
+        return serieFav.show.id === userSelectedFavId
+        console.log(serieFav.id);
     });
+
     console.log(favouritesFound);
     //Agregar a la lista de favoritos
     if (favouritesFound === -1) {
@@ -25,6 +28,14 @@ function handleFavSelect(event) {
     }
 
     //mostrar los datos de esa lista pintando html
+
+    //Cambiar color de la serie favorita en lista principal
+    changeColor()
+}
+
+function changeColor(event) {
+    const image = document.querySelector('.js_image');
+    image.classList.toggle('clicked');
 }
 
 function listenerSelection() {

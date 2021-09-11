@@ -1,10 +1,12 @@
 
 .header{
-    grid-column: 2/3 ;
+    grid-column: 1/4 ;
 
     &__title{
+    text-align: center;
     font-size: 30px;
     color:  $light1;
+    font-weight: bolder;
 }
 }
 

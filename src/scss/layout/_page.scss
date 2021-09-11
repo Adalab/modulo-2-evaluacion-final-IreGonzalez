@@ -72,6 +72,8 @@
         grid-column: 1/3;
         text-align: center;
         color: $light1;
+        font-weight: bolder;
+        border-bottom: solid black 2px;
     }
     &__series{
         display: flex;
@@ -101,6 +103,11 @@
         color: $light1;
     }
 }
+
 .hidden{
     display: none;
+}
+.clicked{
+    background-color:  $light2;
+    color: $light2;
 }
