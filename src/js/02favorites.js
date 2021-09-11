@@ -19,7 +19,6 @@ function handleFavSelect(event) {
         const favouriteListCreator = favourites.push(favouriteSelection);
         //Cambiar color de la serie favorita en lista principal
     };
-    console.log(favourites);
     paintFavourites();
 }
 
@@ -42,6 +41,11 @@ function searchFavourites(search) {
 
 function paintFavourites(event) {
     for (const favSelected of favourites) {
+        // const insertFav = favourites.find(serieFav => {
+        //     return serieFav.show.id === favSelected.show.id;
+        // });
+        // if (insertFav) {
+        console.log(favourites);
         const title = favSelected.show.name;
         const image = favSelected.show.image;
         htmlFav += `<li class="favourites__series js_favElements" >`
@@ -58,6 +62,7 @@ function paintFavourites(event) {
         htmlFav += `<i class ="favourites__button">X</i>`
         htmlFav += `</li>`;
     }
+    // }
     favouriteList.innerHTML = htmlFav;
 
 }
