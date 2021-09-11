@@ -1,4 +1,10 @@
-.header__title{
+
+.header{
+    grid-column: 2/3 ;
+
+    &__title{
     font-size: 30px;
-    margin-bottom: 20px;
+    color:  $light1;
 }
+}
+
