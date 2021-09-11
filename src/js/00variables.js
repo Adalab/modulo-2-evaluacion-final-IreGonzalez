@@ -17,3 +17,5 @@ let html = '';
 let favouriteList = document.querySelector('.js_favourites');
 
 let favourites = [];
+let favClass = '';
+let htmlFav = '';

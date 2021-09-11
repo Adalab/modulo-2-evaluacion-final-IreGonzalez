@@ -49,14 +49,20 @@
     align-items: center;
     gap: 10px;
         &--image{
-            height: 140px;
-            width: 100px;
-            padding: 5px;
-            background-color:  $light1;
+            @include series__image;
+            background-color: $light1;
+            &__clicked{
+                @include series__image;
+                background-color: $light2;
+            }
         }
         &--series{
-            color:  $light1;
+            color: $light1;
             margin-bottom: 20px;
+            &__clicked{
+                color: $light2;
+                margin-bottom: 20px;
+            }
         }
     }
 }
@@ -104,10 +110,9 @@
     }
 }
 
+//Modifiers
+
 .hidden{
     display: none;
 }
-.clicked{
-    background-color:  $light2;
-    color: $light2;
-}
+

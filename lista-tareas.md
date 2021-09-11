@@ -26,10 +26,10 @@
         [X] Escuchar el evento click
         [] Debe realizar dos tareas
             [] Añadir serie a la lista favoritos
-                [] Comprobar si está o no en esa lista
+                [X] Comprobar si está o no en esa lista
                 [] Si no está, pintarla
-            [] Cambiar fondo en lista principal si está en favoritos
-                [] Añadir una clase que modifique el fondo al hacer click sobre ella
+Corregir=>  [] Cambiar fondo en lista principal si está en favoritos
+                [X] Añadir una clase que modifique el fondo al hacer click sobre ella
 [] ALMACENAMIENTO LOCAL
     [] Almacenar los datos de la lista de favoritos en la caché => localStorage.setItem (,)
     [] Al arrancar la página de nuevo, solicitar los datos => localStorage.getItem()
