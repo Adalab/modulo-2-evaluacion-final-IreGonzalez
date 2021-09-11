@@ -1,5 +1,8 @@
 .page{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px;
     padding: 20px;
-    background-color: lightsteelblue;
-    min-height: 100%;
+    background-color: $background;
+    min-height: 100vh;
 }

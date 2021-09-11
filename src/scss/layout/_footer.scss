@@ -1,4 +1,11 @@
+
 .footer{
-    display: flex;
-    column-gap: 10px;
+    grid-column: 2/3 ;
+    
+    &__copy{
+        display: flex;
+        column-gap: 10px;
+        font-size: 14px;
+        margin-top: 90%;
+    }
 }

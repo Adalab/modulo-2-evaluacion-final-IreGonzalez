@@ -1,4 +1,12 @@
-.header__title{
+
+.header{
+    grid-column: 1/4 ;
+
+    &__title{
+    text-align: center;
     font-size: 30px;
-    margin-bottom: 20px;
+    color:  $light1;
+    font-weight: bolder;
 }
+}
+

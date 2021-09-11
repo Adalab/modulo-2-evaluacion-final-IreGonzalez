@@ -1,3 +1,17 @@
 // fonts
 
 // colors
+$light1: rgb(207, 204, 204);
+$light2:  rgb(163, 19, 43);
+$background: rgb(77, 5, 5);
+$inputbackground: rgb(82, 70, 70);
+$inputcolor: rgb(31, 11, 12);
+$placeholdercolor: rgb(14, 11, 11);
+$buttoncolor: rgb(32, 32, 32);
+
+//Mixins
+@mixin series__image{
+    height: 140px;
+    width: 100px;
+    padding: 5px;
+}
