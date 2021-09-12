@@ -2,6 +2,7 @@
 //FUNCTIONS
 
 //Search
+savedFavList()
 
 function urlCreator() {
     const url = `//api.tvmaze.com/search/shows?q=${input.value}`;

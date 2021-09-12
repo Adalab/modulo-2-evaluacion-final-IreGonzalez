@@ -2,7 +2,7 @@
 [] RECORDATORIOS ESENCIALES
     [] Quitar los console.log()
     [] Limpiar comentarios de la rama Master
-    [] Hacer COMMITS cada poco tiempo
+    [X] Hacer COMMITS cada poco tiempo
     [X] Trabajar en testing y mergear SOLO cuando funcione algo
     [] Funciones ARROW llamadas handle...
     [] Mejorar el README
@@ -25,9 +25,9 @@
     [] Seleccionar serie
         [X] Escuchar el evento click
         [] Debe realizar dos tareas
-            [] Añadir serie a la lista favoritos
+            [X] Añadir serie a la lista favoritos
                 [X] Comprobar si está o no en esa lista
-                [] Si no está, pintarla
+                [X] Si no está, pintarla
 Corregir=>  [] Cambiar fondo en lista principal si está en favoritos
                 [X] Añadir una clase que modifique el fondo al hacer click sobre ella
 [] ALMACENAMIENTO LOCAL

@@ -1,28 +1,35 @@
 //Favorites
+let favSelected = [];
 
 function handleFavSelect(event) {
     //Escuchar dónde se hace click y añadirlo al contenedor de favoritos
     const userSelectedFavId = parseInt(event.currentTarget.id);
-    console.log(userSelectedFavId);
     //Que el currentTarget del ob.clikado debe ser igual al encontrado en la lista series
     const favouriteSelection = series.find(select => {
         return select.show.id === userSelectedFavId
     });
-    console.log(favouriteSelection);
     //Compruebo si ya está en la lista
     const favouritesFound = favourites.findIndex(serieFav => {
         return serieFav.show.id === userSelectedFavId
     });
+    //añadir el objeto seleccionado a una constante para poder ser usado
+    favSelected = favouriteSelection;
     //Agregar a la lista de favoritos
     if (favouritesFound === -1) {
         //crear una lista nueva con ellas
         const favouriteListCreator = favourites.push(favouriteSelection);
         //Cambiar color de la serie favorita en lista principal
+        //mostrar los datos de esa lista pintando html
+        paintFavList();
     };
+    console.log(favourites);
+    savedFavList();
+}
 
-    //mostrar los datos de esa lista pintando html
-    const title = favouriteSelection.show.name;
-    const image = favouriteSelection.show.image;
+
+function paintFavList() {
+    const title = favSelected.show.name;
+    const image = favSelected.show.image;
     htmlFav += `<li class="favourites__series js_favElements" >`
     htmlFav += `<div class="favourites__elements">`
     if (image === null) {
