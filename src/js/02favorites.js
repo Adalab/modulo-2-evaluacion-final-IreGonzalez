@@ -19,8 +19,24 @@ function handleFavSelect(event) {
         const favouriteListCreator = favourites.push(favouriteSelection);
         //Cambiar color de la serie favorita en lista principal
     };
-    console.log(favourites);
-    paintFavourites();
+
+    //mostrar los datos de esa lista pintando html
+    const title = favouriteSelection.show.name;
+    const image = favouriteSelection.show.image;
+    htmlFav += `<li class="favourites__series js_favElements" >`
+    htmlFav += `<div class="favourites__elements">`
+    if (image === null) {
+        const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
+        html += `<img class="favourites__elements--image js_favImage" src="" alt="Cartel de la serie"></img>`
+    }
+    else {
+        htmlFav += `<img class="favourites__elements--image js_favImage" src="${image.original}" alt="Cartel de la serie"></img>`
+    }
+    htmlFav += `<p class="favourites__elements--series js_favSeries">${title}</p>`
+    htmlFav += `</div>`
+    htmlFav += `<i class ="favourites__button">X</i>`
+    htmlFav += `</li>`;
+    favouriteList.innerHTML = htmlFav;
 }
 
 //Consultar si está o no en la lista de favoritos
@@ -37,33 +53,6 @@ function searchFavourites(search) {
         return true;
     }
 }
-
-//mostrar los datos de esa lista pintando html
-
-function paintFavourites(event) {
-    for (const favSelected of favourites) {
-        const title = favSelected.show.name;
-        const image = favSelected.show.image;
-        htmlFav += `<li class="favourites__series js_favElements" >`
-        htmlFav += `<div class="favourites__elements">`
-        if (image === null) {
-            const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
-            html += `<img class="favourites__elements--image js_favImage" src="" alt="Cartel de la serie"></img>`
-        }
-        else {
-            htmlFav += `<img class="favourites__elements--image js_favImage" src="${image.original}" alt="Cartel de la serie"></img>`
-        }
-        htmlFav += `<p class="favourites__elements--series js_favSeries">${title}</p>`
-        htmlFav += `</div>`
-        htmlFav += `<i class ="favourites__button">X</i>`
-        htmlFav += `</li>`;
-    }
-    favouriteList.innerHTML = htmlFav;
-
-}
-
-
-
 
 function listenerSelection() {
     //esta clase solo existe al pintarse el html, por eso solo se puede ejecutar al final de ser pintada, para asegurarnos que exista
