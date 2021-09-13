@@ -20,21 +20,25 @@ function handleFavSelect(event) {
         const favouriteListCreator = favourites.push(favouriteSelection);
         //Cambiar color de la serie favorita en lista principal
         //mostrar los datos de esa lista pintando html
-        paintFavList();
+        paintFavList(favSelected);
         savedFavList();
     }
     else {
         favourites.splice(favouritesFound, 1);
-        //Elimina de la lista de favoritos al volver a ser clickada
-        favouriteList.remove(favouritesFound);
         savedFavList();
+        //vaciar la lista de favoritos para volver a pintarla
+        favouriteList.innerHTML = '';
+        for (const favSelected of favourites) {
+            paintFavList(favSelected)
+        }
     }
     paintSeries()
     console.log(favourites);
 }
 
 
-function paintFavList() {
+function paintFavList(favSelected) {
+    let htmlFav = '';
     const title = favSelected.show.name;
     const image = favSelected.show.image;
     htmlFav += `<li class="favourites__series js_favElements" >`
@@ -48,7 +52,7 @@ function paintFavList() {
     }
     htmlFav += `<p class="favourites__elements--series js_favSeries">${title}</p>`
     htmlFav += `</div>`
-    htmlFav += `<i class ="favourites__button">X</i>`
+    htmlFav += `<i class ="favourites__button js_removeButton">X</i>`
     htmlFav += `</li>`;
     favouriteList.innerHTML = htmlFav;
 }

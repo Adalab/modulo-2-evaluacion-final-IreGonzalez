@@ -6,10 +6,16 @@ function savedFavList() {
 //Extraemos de la caché los datos recorriendo la lista de la Api y extrayendo los necesarios para nuestra web
 function getLocalStorage() {
     const savedFavourites = JSON.parse(localStorage.getItem('favourites'))
-    favourites = savedFavourites;
-    // for (const favSelected of favourites) {
-    //     paintFavList()
-    // }
+
+    if (savedFavourites === null) {
+        favourites = [];
+    }
+    else {
+        favourites = savedFavourites;
+    }
+    for (const favSelected of favourites) {
+        paintFavList(favSelected)
+    }
 }
 
 getLocalStorage()
