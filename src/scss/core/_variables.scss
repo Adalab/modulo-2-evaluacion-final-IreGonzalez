@@ -11,18 +11,18 @@ $brown: rgb(71, 36, 8);
 
 //Mixins
 @mixin series__image{
-    height: 115px;
-    width: 81px;
+    height: 101px;
+    width: 69px;
     padding: 5px;
+    @media  (min-width: 1200px){
+        height: 202px;
+        width: 138px;
+    }
 }
 
 @mixin button{
-    height: 15px;
-    width: 8ch;
     background-color: $brown;
-    border-radius: 5px;
     box-sizing: content-box;
-    padding: 10px;
     font-weight: bold;
     color: $orange;
     &:hover{

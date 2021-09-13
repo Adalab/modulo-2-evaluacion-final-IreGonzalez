@@ -1,16 +1,15 @@
 
 .footer{
-    grid-column: 1/5 ;
     position: fixed;
-    bottom: 0px;    
+    bottom: 0px;
     background-color: $yellow;
     height: 30px;
-    width: 100%;
+    width: 100vw;
     &__copy{
         display: flex;
         column-gap: 10px;
         font-size: 10px;
-        margin: 10px 10px;
+        margin: 10px 20px;
         justify-content: right;
     }
 }

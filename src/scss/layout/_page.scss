@@ -25,6 +25,10 @@
         }
         }
     &__button{
+        height: 15px;
+        width: 8ch;
+        padding: 10px;
+        border-radius: 5px;
         @include button;
     }
 }
@@ -40,12 +44,26 @@
     grid-column: 2/4;
     grid-row: 3/4;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    @media (min-width: 768px){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+    @media  (min-width: 1200px){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     &__elements{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    @mixin series__image{
+        height: 101px;
+        width: 69px;
+        padding: 5px;
+    }
         &--image{
             @include series__image;
             background-color: $lightbrown;
@@ -55,6 +73,7 @@
             &__clicked{
                 @include series__image;
                 background-color: $redbrown;
+                
                 &:hover{
                     background-color: $lightbrown;
                 }
@@ -72,19 +91,25 @@
 }
 
 .favourites__elements{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1/3;
+    display: flex;
     &--title{
-        grid-column: 1/3;
         text-align: center;
-        color: $lightbrown;
         font-weight: bolder;
-        border-bottom: solid black 2px;
-        margin-top: 10px;
+        color: $lightbrown;
+        margin: auto;
+        padding-bottom: 5px;
+        border-bottom: solid $brown 2px;
     }
     
     &--reset{
-        grid-column: 2/4;
+        margin: auto;
+        font-size: 13px;
+        height: 13px;
+        width: 6ch;
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 10px;
         @include button;
     }
 }
@@ -92,13 +117,18 @@
 
 .favourites{
     grid-column: 1/2;
-    grid-row: 2;
+    grid-row: 3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 180px 180px;
     flex-direction: column;
     row-gap: 10px;
-    
+    margin-bottom: 70px;
+    border-right: solid $brown 1px;
+
+    @media (min-width: 768px){
+        grid-template-columns: 1fr 1fr;
+    }
     &__series{
         display: flex;
         flex-direction: column;
@@ -111,11 +141,15 @@
         flex-direction: column;
         row-gap: 10px;
         &--image{
-            height: 70px;
-            width: 50px;
+            height: 50px;
+            width: 34px;
             margin: auto;
             background-color:$lightbrown;
             padding: 2px;
+            @media  (min-width: 768px){
+                height: 75px;
+                width: 51px;
+            }
         }
         &--series{
             color: $lightbrown;
@@ -144,4 +178,3 @@
 .hidden{
     display: none;
 }
-
