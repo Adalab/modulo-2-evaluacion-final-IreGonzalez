@@ -15,3 +15,13 @@ $buttoncolor: rgb(32, 32, 32);
     width: 100px;
     padding: 5px;
 }
+
+@mixin button{
+    height: 15px;
+        width: 8ch;
+        background-color: $buttoncolor;
+        border-radius: 5px;
+        box-sizing: content-box;
+        padding: 10px;
+        color: $light1;
+}

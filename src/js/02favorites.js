@@ -1,9 +1,9 @@
 //Favorites
-let favSelected = [];
 
 function handleFavSelect(event) {
     //Escuchar dónde se hace click y añadirlo al contenedor de favoritos
     const userSelectedFavId = parseInt(event.currentTarget.id);
+    console.log(userSelectedFavId);
     //Que el currentTarget del ob.clikado debe ser igual al encontrado en la lista series
     const favouriteSelection = series.find(select => {
         return select.show.id === userSelectedFavId
@@ -32,29 +32,37 @@ function handleFavSelect(event) {
             paintFavList(favSelected)
         }
     }
-    paintSeries()
+    paintSeries();
+    listenerRemove();
+    addReset();
     console.log(favourites);
 }
 
 
 function paintFavList(favSelected) {
     let htmlFav = '';
-    const title = favSelected.show.name;
-    const image = favSelected.show.image;
-    htmlFav += `<li class="favourites__series js_favElements" >`
-    htmlFav += `<div class="favourites__elements">`
-    if (image === null) {
-        const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
-        html += `<img class="favourites__elements--image js_favImage" src="" alt="Cartel de la serie"></img>`
+    favouriteList.innerHTML = '';
+    for (const favSelected of favourites) {
+        const id = favSelected.show.id;
+        const title = favSelected.show.name;
+        const image = favSelected.show.image;
+        htmlFav += `<li class="favourites__series " >`
+        htmlFav += `<div class="favourites__elements">`
+        if (image === null) {
+            const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
+            htmlFav += `<img class="favourites__elements--image " src="${image}" alt="Cartel de la serie"></img>`
+        }
+        else {
+            htmlFav += `<img class="favourites__elements--image " src="${image.original}" alt="Cartel de la serie"></img>`
+        }
+        htmlFav += `<p class="favourites__elements--series ">${title}</p>`
+        htmlFav += `</div>`
+        htmlFav += `<button name="${id}" class ="favourites__button js_removeButton"><i class="far fa-trash-alt"></i>
+        </button>`
+        htmlFav += `</li>`;
     }
-    else {
-        htmlFav += `<img class="favourites__elements--image js_favImage" src="${image.original}" alt="Cartel de la serie"></img>`
-    }
-    htmlFav += `<p class="favourites__elements--series js_favSeries">${title}</p>`
-    htmlFav += `</div>`
-    htmlFav += `<i class ="favourites__button js_removeButton">X</i>`
-    htmlFav += `</li>`;
     favouriteList.innerHTML = htmlFav;
+    listenerRemove();
 }
 
 //Consultar si está o no en la lista de favoritos
@@ -80,3 +88,49 @@ function listenerSelection() {
     }
 }
 
+function handleFavRemove(event) {
+    if (favourites !== null) {
+        //Identifico cuál es la que desean eliminar
+        const userWantRemove = parseInt(event.currentTarget.name)
+        console.log(event.currentTarget);
+        //Busco en la lista de Favoritos cuál es su posición
+        const favouritesFound = favourites.findIndex(serieFav => {
+            return serieFav.show.id === userWantRemove
+        });
+        console.log(favouritesFound);
+        // //Elimino de la lista
+        // const toRemove = parseInt(favouritesFound);
+        const favouriteListRemove = favourites.splice(favouritesFound, 1);
+        paintFavList();
+        paintSeries();
+    }
+}
+
+
+function listenerRemove() {
+    //solo existe al generarse favourites, por eso solo se puede ejecutar al final de generarse
+    const buttonList = document.querySelectorAll('.js_removeButton');
+    for (const removeButton of buttonList) {
+        removeButton.addEventListener('click', handleFavRemove);
+    }
+    //Actualizamos los datos de la lista guardada en localStorage
+    savedFavList();
+}
+
+function addReset() {
+    if (favourites.length > 1) {
+        reset.classList.remove('hidden');
+    }
+    else {
+        reset.classList.add('hidden');
+    }
+}
+addReset();
+
+function handleResetFavList() {
+    favourites = [];
+    //Repintamos la lista de favoritos, ahora vacía
+    paintFavList(favSelected);
+    //Actualizamos la lista de localStorage
+    savedFavList();
+}

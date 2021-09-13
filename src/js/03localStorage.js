@@ -15,6 +15,7 @@ function getLocalStorage() {
     }
     for (const favSelected of favourites) {
         paintFavList(favSelected)
+        addReset()
     }
 }
 

@@ -24,13 +24,7 @@
         }
     }
     &__button{
-        height: 15px;
-        width: 8ch;
-        background-color: $buttoncolor;
-        border-radius: 5px;
-        box-sizing: content-box;
-        padding: 10px;
-        color: $light1;
+        @include button;
     }
 }
 
@@ -38,10 +32,12 @@
     grid-column: 1/4;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50% 50% 50px;
 }
 
 .list{
     grid-column: 2/4;
+    grid-row: 2/4;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     &__elements{
@@ -79,6 +75,7 @@
 
 .favourites{
     grid-column: 1/2;
+    grid-row: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 180px 180px;
@@ -110,7 +107,23 @@
             }
         }
     &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: $light1;
+        font-size: 10px;
+        width: 20px;
+        height: 20px;
+        background-color: $buttoncolor;
+        border-radius: 50%;
+        &:hover{
+            color: unset;
+        }
+    }
+    &__reset{
+        grid-column: 1/2;
+        grid-row: 4;
+        @include button;
     }
 }
 
