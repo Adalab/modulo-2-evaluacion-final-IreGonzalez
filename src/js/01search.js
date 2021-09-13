@@ -50,6 +50,5 @@ function handleSearchSeries(event) {
             console.log(series);
             paintSeries();
         })
-
 };
 
