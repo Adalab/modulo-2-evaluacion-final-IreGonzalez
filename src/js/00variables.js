@@ -15,5 +15,6 @@ let series = [];
 
 //Favorites
 let favouriteList = document.querySelector('.js_favourites');
+const reset = document.querySelector('.js_reset');
 
 let favourites = [];

@@ -107,7 +107,14 @@
         color: $light1;
     }
     &__reset{
+        grid-column: 1/2;
         @include button;
     }
+}
+
+//Modifiers
+
+.hidden{
+    display: none;
 }
 

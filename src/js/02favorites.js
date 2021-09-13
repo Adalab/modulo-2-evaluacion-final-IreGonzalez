@@ -47,7 +47,7 @@ function paintFavList(favSelected) {
         htmlFav += `<div class="favourites__elements">`
         if (image === null) {
             const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
-            html += `<img class="favourites__elements--image js_favImage" src="" alt="Cartel de la serie"></img>`
+            htmlFav += `<img class="favourites__elements--image js_favImage" src="${image}" alt="Cartel de la serie"></img>`
         }
         else {
             htmlFav += `<img class="favourites__elements--image js_favImage" src="${image.original}" alt="Cartel de la serie"></img>`
@@ -84,9 +84,14 @@ function listenerSelection() {
     }
 }
 
-// function addReset() {
-//     if (favourites.lenght > 1) {
-//         favouriteList.appendChild(`<button class="favourites__reset">Reset</button>`)
-//     }
-// }
-// addReset();
+function addReset() {
+    console.log(favourites.length);
+    if (favourites.length > 1) {
+        reset.classList.remove('hidden');
+    }
+    else {
+        reset.classList.add('hidden');
+    }
+}
+addReset()
+
