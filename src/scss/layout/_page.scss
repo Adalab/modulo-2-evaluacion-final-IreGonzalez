@@ -107,13 +107,18 @@
             }
         }
     &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: $light1;
         font-size: 10px;
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
         background-color: $buttoncolor;
         border-radius: 50%;
-        text-align: center;
+        &:hover{
+            color: unset;
+        }
     }
     &__reset{
         grid-column: 1/2;

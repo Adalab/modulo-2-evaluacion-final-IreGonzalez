@@ -3,6 +3,7 @@
 function handleFavSelect(event) {
     //Escuchar dónde se hace click y añadirlo al contenedor de favoritos
     const userSelectedFavId = parseInt(event.currentTarget.id);
+    console.log(userSelectedFavId);
     //Que el currentTarget del ob.clikado debe ser igual al encontrado en la lista series
     const favouriteSelection = series.find(select => {
         return select.show.id === userSelectedFavId
@@ -42,6 +43,7 @@ function paintFavList(favSelected) {
     let htmlFav = '';
     favouriteList.innerHTML = '';
     for (const favSelected of favourites) {
+        const id = favSelected.show.id;
         const title = favSelected.show.name;
         const image = favSelected.show.image;
         htmlFav += `<li class="favourites__series " >`
@@ -55,12 +57,12 @@ function paintFavList(favSelected) {
         }
         htmlFav += `<p class="favourites__elements--series ">${title}</p>`
         htmlFav += `</div>`
-        htmlFav += `<button class ="favourites__button js_removeButton"><i class="fas fa-trash-alt"></i>
+        htmlFav += `<button name="${id}" class ="favourites__button js_removeButton"><i class="far fa-trash-alt"></i>
         </button>`
         htmlFav += `</li>`;
     }
-
     favouriteList.innerHTML = htmlFav;
+    listenerRemove();
 }
 
 //Consultar si está o no en la lista de favoritos
@@ -87,29 +89,35 @@ function listenerSelection() {
 }
 
 function handleFavRemove(event) {
-    if (savedFavourites !== null) {
-        //Identifico cuál es la qeu desean eliminar
-        const userWantRemove = parseInt(event.currentTarget.id)
+    if (favourites !== null) {
+        //Identifico cuál es la que desean eliminar
+        const userWantRemove = parseInt(event.currentTarget.name)
+        console.log(event.currentTarget);
         //Busco en la lista de Favoritos cuál es su posición
         const favouritesFound = favourites.findIndex(serieFav => {
             return serieFav.show.id === userWantRemove
         });
-        //Elimino de la lista
-        const favouriteListRemove = favourites.splice(favouritesFound, 1)
+        console.log(favouritesFound);
+        // //Elimino de la lista
+        // const toRemove = parseInt(favouritesFound);
+        const favouriteListRemove = favourites.splice(favouritesFound, 1);
+        paintFavList();
+        paintSeries();
     }
 }
 
+
 function listenerRemove() {
     //solo existe al generarse favourites, por eso solo se puede ejecutar al final de generarse
-    const favList = document.querySelectorAll('.favourites__series');
-    for (const removefavourite of favList) {
-        removefavourite.addEventListener('click', handleFavRemove);
+    const buttonList = document.querySelectorAll('.js_removeButton');
+    for (const removeButton of buttonList) {
+        removeButton.addEventListener('click', handleFavRemove);
     }
+    //Actualizamos los datos de la lista guardada en localStorage
     savedFavList();
 }
 
 function addReset() {
-    console.log(favourites.length);
     if (favourites.length > 1) {
         reset.classList.remove('hidden');
     }
@@ -121,6 +129,8 @@ addReset();
 
 function handleResetFavList() {
     favourites = [];
+    //Repintamos la lista de favoritos, ahora vacía
     paintFavList(favSelected);
+    //Actualizamos la lista de localStorage
     savedFavList();
 }
