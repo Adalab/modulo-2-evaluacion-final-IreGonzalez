@@ -1,11 +1,11 @@
 [X] ESTRUCTURA BÁSICA
-[] RECORDATORIOS ESENCIALES
-    [] Quitar los console.log()
-    [] Limpiar comentarios de la rama Master
+[X] RECORDATORIOS ESENCIALES
+    [X] Quitar los console.log()
+    [X] Limpiar comentarios de la rama Master
     [X] Hacer COMMITS cada poco tiempo
     [X] Trabajar en testing y mergear SOLO cuando funcione algo
     [X] Funciones ARROW llamadas handle...
-    [] Mejorar el README
+    [X] Mejorar el README
     [X]Añadir que se active la búsqueda con INTRO(se activa por defecto)
     [X] Dividir el JS
 [X] BÚSQUEDA
@@ -34,7 +34,7 @@
     [X] Almacenar los datos de la lista de favoritos en la caché => localStorage.setItem (,)
     [X] Al arrancar la página de nuevo, solicitar los datos => localStorage.getItem()
     [X] Pintar lista de favoritos con los datos obtenidos
-[] BONUS: BORRAR FAVORITOS
+[X] BONUS: BORRAR FAVORITOS
     [X] Escuchar el evento click en el botón-Aspa
     [X] Eliminar de la lista de favoritos (no solo la info, tb del html)
     [X] Cuando haya más de 1 elemento en la lista, que aparezca un botón de eliminar todos

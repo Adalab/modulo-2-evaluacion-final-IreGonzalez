@@ -16,7 +16,6 @@ function paintSeries() {
         const id = search.show.id;
         const title = search.show.name;
         const image = search.show.image;
-        //Añadir la clase correspondiente si está en la lista favourites
         const insertFavClass = searchFavourites(search);
         if (insertFavClass) {
             favClass = '__clicked'
@@ -25,7 +24,6 @@ function paintSeries() {
             favClass = '';
         }
 
-        //Pintar Series en el cuerpo principal de la página
         html += `<li class="list__elements js_elements" id= "${id}">`;
         if (image === null) {
             const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
@@ -38,7 +36,6 @@ function paintSeries() {
         html += `</li>`;
     }
     seriesList.innerHTML = html;
-    //solo puede ser ejecutada si se ha pintado previamente el html
     listenerSelection();
 };
 
@@ -49,7 +46,6 @@ function handleSearchSeries(event) {
         .then(response => response.json())
         .then(data => {
             series = data;
-            console.log(series);
             paintSeries();
         })
 };
