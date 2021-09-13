@@ -39,21 +39,25 @@ function handleFavSelect(event) {
 
 function paintFavList(favSelected) {
     let htmlFav = '';
-    const title = favSelected.show.name;
-    const image = favSelected.show.image;
-    htmlFav += `<li class="favourites__series js_favElements" >`
-    htmlFav += `<div class="favourites__elements">`
-    if (image === null) {
-        const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
-        html += `<img class="favourites__elements--image js_favImage" src="" alt="Cartel de la serie"></img>`
+    favouriteList.innerHTML = '';
+    for (const favSelected of favourites) {
+        const title = favSelected.show.name;
+        const image = favSelected.show.image;
+        htmlFav += `<li class="favourites__series js_favElements" >`
+        htmlFav += `<div class="favourites__elements">`
+        if (image === null) {
+            const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
+            html += `<img class="favourites__elements--image js_favImage" src="" alt="Cartel de la serie"></img>`
+        }
+        else {
+            htmlFav += `<img class="favourites__elements--image js_favImage" src="${image.original}" alt="Cartel de la serie"></img>`
+        }
+        htmlFav += `<p class="favourites__elements--series js_favSeries">${title}</p>`
+        htmlFav += `</div>`
+        htmlFav += `<i class ="favourites__button js_removeButton">X</i>`
+        htmlFav += `</li>`;
     }
-    else {
-        htmlFav += `<img class="favourites__elements--image js_favImage" src="${image.original}" alt="Cartel de la serie"></img>`
-    }
-    htmlFav += `<p class="favourites__elements--series js_favSeries">${title}</p>`
-    htmlFav += `</div>`
-    htmlFav += `<i class ="favourites__button js_removeButton">X</i>`
-    htmlFav += `</li>`;
+
     favouriteList.innerHTML = htmlFav;
 }
 
@@ -80,3 +84,9 @@ function listenerSelection() {
     }
 }
 
+// function addReset() {
+//     if (favourites.lenght > 1) {
+//         favouriteList.appendChild(`<button class="favourites__reset">Reset</button>`)
+//     }
+// }
+// addReset();

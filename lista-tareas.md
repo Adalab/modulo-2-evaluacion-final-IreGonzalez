@@ -28,12 +28,12 @@
             [X] Añadir serie a la lista favoritos
                 [X] Comprobar si está o no en esa lista
                 [X] Si no está, pintarla
-Corregir=>  [X] Cambiar fondo en lista principal si está en favoritos
+            [X] Cambiar fondo en lista principal si está en favoritos
                 [X] Añadir una clase que modifique el fondo al hacer click sobre ella
-[] ALMACENAMIENTO LOCAL
+[X] ALMACENAMIENTO LOCAL
     [X] Almacenar los datos de la lista de favoritos en la caché => localStorage.setItem (,)
     [X] Al arrancar la página de nuevo, solicitar los datos => localStorage.getItem()
-    [] Pintar lista de favoritos con los datos obtenidos
+    [X] Pintar lista de favoritos con los datos obtenidos
 [] BONUS: BORRAR FAVORITOS
     [] Escuchar el evento click en el botón-Aspa
     [X] Eliminar de la lista de favoritos (no solo la info, tb del html)

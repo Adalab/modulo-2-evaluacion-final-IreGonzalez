@@ -24,13 +24,7 @@
         }
     }
     &__button{
-        height: 15px;
-        width: 8ch;
-        background-color: $buttoncolor;
-        border-radius: 5px;
-        box-sizing: content-box;
-        padding: 10px;
-        color: $light1;
+        @include button;
     }
 }
 
@@ -112,11 +106,8 @@
     &__button{
         color: $light1;
     }
-}
-
-//Modifiers
-
-.hidden{
-    display: none;
+    &__reset{
+        @include button;
+    }
 }
 
