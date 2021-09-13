@@ -11,8 +11,8 @@ $brown: rgb(71, 36, 8);
 
 //Mixins
 @mixin series__image{
-    height: 140px;
-    width: 100px;
+    height: 100%;
+    width: 100%;
     padding: 5px;
 }
 
