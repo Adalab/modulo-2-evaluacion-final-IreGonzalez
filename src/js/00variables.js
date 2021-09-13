@@ -15,6 +15,8 @@ let series = [];
 
 //Favorites
 let favouriteList = document.querySelector('.js_favourites');
+const removefavourite = document.querySelector('.js_removeButton');
 const reset = document.querySelector('.js_reset');
 
 let favourites = [];
+let favSelected = [];

@@ -108,6 +108,12 @@
         }
     &__button{
         color: $light1;
+        font-size: 10px;
+        width: 15px;
+        height: 15px;
+        background-color: $buttoncolor;
+        border-radius: 50%;
+        text-align: center;
     }
     &__reset{
         grid-column: 1/2;

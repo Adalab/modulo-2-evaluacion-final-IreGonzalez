@@ -1,5 +1,4 @@
 //Favorites
-let favSelected = [];
 
 function handleFavSelect(event) {
     //Escuchar dónde se hace click y añadirlo al contenedor de favoritos
@@ -32,7 +31,8 @@ function handleFavSelect(event) {
             paintFavList(favSelected)
         }
     }
-    paintSeries()
+    paintSeries();
+    listenerRemove();
     addReset();
     console.log(favourites);
 }
@@ -44,18 +44,19 @@ function paintFavList(favSelected) {
     for (const favSelected of favourites) {
         const title = favSelected.show.name;
         const image = favSelected.show.image;
-        htmlFav += `<li class="favourites__series js_favElements" >`
+        htmlFav += `<li class="favourites__series " >`
         htmlFav += `<div class="favourites__elements">`
         if (image === null) {
             const image = 'https://via.placeholder.com/210x295/ffffff/666666/text=TV'
-            htmlFav += `<img class="favourites__elements--image js_favImage" src="${image}" alt="Cartel de la serie"></img>`
+            htmlFav += `<img class="favourites__elements--image " src="${image}" alt="Cartel de la serie"></img>`
         }
         else {
-            htmlFav += `<img class="favourites__elements--image js_favImage" src="${image.original}" alt="Cartel de la serie"></img>`
+            htmlFav += `<img class="favourites__elements--image " src="${image.original}" alt="Cartel de la serie"></img>`
         }
-        htmlFav += `<p class="favourites__elements--series js_favSeries">${title}</p>`
+        htmlFav += `<p class="favourites__elements--series ">${title}</p>`
         htmlFav += `</div>`
-        htmlFav += `<i class ="favourites__button js_removeButton">X</i>`
+        htmlFav += `<button class ="favourites__button js_removeButton"><i class="fas fa-trash-alt"></i>
+        </button>`
         htmlFav += `</li>`;
     }
 
@@ -83,6 +84,28 @@ function listenerSelection() {
     for (const selected of listElements) {
         selected.addEventListener('click', handleFavSelect)
     }
+}
+
+function handleFavRemove(event) {
+    if (savedFavourites !== null) {
+        //Identifico cuál es la qeu desean eliminar
+        const userWantRemove = parseInt(event.currentTarget.id)
+        //Busco en la lista de Favoritos cuál es su posición
+        const favouritesFound = favourites.findIndex(serieFav => {
+            return serieFav.show.id === userWantRemove
+        });
+        //Elimino de la lista
+        const favouriteListRemove = favourites.splice(favouritesFound, 1)
+    }
+}
+
+function listenerRemove() {
+    //solo existe al generarse favourites, por eso solo se puede ejecutar al final de generarse
+    const favList = document.querySelectorAll('.favourites__series');
+    for (const removefavourite of favList) {
+        removefavourite.addEventListener('click', handleFavRemove);
+    }
+    savedFavList();
 }
 
 function addReset() {

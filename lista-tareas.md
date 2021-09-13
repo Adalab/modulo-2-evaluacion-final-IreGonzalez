@@ -37,11 +37,11 @@
 [] BONUS: BORRAR FAVORITOS
     [] Escuchar el evento click en el botón-Aspa
     [X] Eliminar de la lista de favoritos (no solo la info, tb del html)
-    [] Cuando haya más de 1 elemento en la lista, que aparezca un botón de eliminar todos
-[] BONUS: AFINAR LA MAQUETACIÓN
-    [] Completar el grid que ordena las películas
-    [] Editar la lista de favoritos
-    [] Dar estilos a los botones
-    [] Buscar iconos para los notones de eliminar
+    [X] Cuando haya más de 1 elemento en la lista, que aparezca un botón de eliminar todos
+[X] BONUS: AFINAR LA MAQUETACIÓN
+    [X] Completar el grid que ordena las películas
+    [X] Editar la lista de favoritos
+    [X] Dar estilos a los botones
+    [X] Buscar iconos para los notones de eliminar
 
 

@@ -39,12 +39,12 @@ function paintSeries() {
     }
     seriesList.innerHTML = html;
     //solo puede ser ejecutada si se ha pintado previamente el html
-    listenerSelection()
+    listenerSelection();
 };
 
 function handleSearchSeries(event) {
     event.preventDefault();
-    let url = urlCreator()
+    let url = urlCreator();
     fetch(url)
         .then(response => response.json())
         .then(data => {
