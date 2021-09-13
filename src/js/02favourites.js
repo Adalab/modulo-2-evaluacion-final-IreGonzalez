@@ -124,6 +124,8 @@ function listenerRemove() {
     for (const removeButton of buttonList) {
         removeButton.addEventListener('click', handleFavRemove);
     }
+    //Actualizamos la lista principal de "series" para eliminar la clase de resalte
+    paintSeries();
     savedFavList();
 }
 
