@@ -11,6 +11,7 @@
     grid-column: 2/3;
     display: flex;
     justify-content: space-between;
+    column-gap: 15px;
 
     &__input{
         background-color: $inputbackground;

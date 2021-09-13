@@ -31,11 +31,12 @@
 Corregir=>  [] Cambiar fondo en lista principal si está en favoritos
                 [X] Añadir una clase que modifique el fondo al hacer click sobre ella
 [] ALMACENAMIENTO LOCAL
-    [] Almacenar los datos de la lista de favoritos en la caché => localStorage.setItem (,)
-    [] Al arrancar la página de nuevo, solicitar los datos => localStorage.getItem()
+    [X] Almacenar los datos de la lista de favoritos en la caché => localStorage.setItem (,)
+    [X] Al arrancar la página de nuevo, solicitar los datos => localStorage.getItem()
+    [] Pintar lista de favoritos con los datos obtenidos
 [] BONUS: BORRAR FAVORITOS
     [] Escuchar el evento click en el botón-Aspa
-    [] Eliminar de la lista de favoritos (no solo la info, tb del html)
+    [X] Eliminar de la lista de favoritos (no solo la info, tb del html)
     [] Cuando haya más de 1 elemento en la lista, que aparezca un botón de eliminar todos
 [] BONUS: AFINAR LA MAQUETACIÓN
     [] Completar el grid que ordena las películas

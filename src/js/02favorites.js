@@ -21,9 +21,16 @@ function handleFavSelect(event) {
         //Cambiar color de la serie favorita en lista principal
         //mostrar los datos de esa lista pintando html
         paintFavList();
-    };
+        savedFavList();
+    }
+    else {
+        favourites.splice(favouritesFound, 1);
+        //Elimina de la lista de favoritos al volver a ser clickada
+        favouriteList.remove(favouritesFound);
+        savedFavList();
+    }
+    paintSeries()
     console.log(favourites);
-    savedFavList();
 }
 
 
@@ -68,3 +75,4 @@ function listenerSelection() {
         selected.addEventListener('click', handleFavSelect)
     }
 }
+
