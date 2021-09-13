@@ -1,10 +1,13 @@
 
 .footer{
-    grid-column: 2/3 ;
+    grid-column: 1/5 ;
+    background-color: $yellow;
+    height: 30px;
     &__copy{
         display: flex;
         column-gap: 10px;
         font-size: 10px;
-        margin-top: 90%;
+        margin-top: 10px;
+        justify-content: right;
     }
 }
