@@ -21,14 +21,14 @@
             [X] Crear el html necesario a través de js
             [X] Si poseen imagen propia, expraerla y pintarla
             [X] Si no poseen imagen establecer una imagen por defecto
-[] FAVORITOS
-    [] Seleccionar serie
+[X] FAVORITOS
+    [X] Seleccionar serie
         [X] Escuchar el evento click
-        [] Debe realizar dos tareas
+        [X] Debe realizar dos tareas
             [X] Añadir serie a la lista favoritos
                 [X] Comprobar si está o no en esa lista
                 [X] Si no está, pintarla
-Corregir=>  [] Cambiar fondo en lista principal si está en favoritos
+Corregir=>  [X] Cambiar fondo en lista principal si está en favoritos
                 [X] Añadir una clase que modifique el fondo al hacer click sobre ella
 [] ALMACENAMIENTO LOCAL
     [X] Almacenar los datos de la lista de favoritos en la caché => localStorage.setItem (,)

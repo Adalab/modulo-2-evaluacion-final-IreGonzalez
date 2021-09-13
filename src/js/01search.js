@@ -9,7 +9,9 @@ function urlCreator() {
 };
 
 function paintSeries() {
-
+    let html = '';
+    let favClass = '';
+    seriesList.innerHTML = '';
     for (const search of series) {
         const id = search.show.id;
         const title = search.show.name;
