@@ -33,6 +33,7 @@ function handleFavSelect(event) {
         }
     }
     paintSeries()
+    addReset();
     console.log(favourites);
 }
 
@@ -93,5 +94,10 @@ function addReset() {
         reset.classList.add('hidden');
     }
 }
-addReset()
+addReset();
 
+function handleResetFavList() {
+    favourites = [];
+    paintFavList(favSelected);
+    savedFavList();
+}
