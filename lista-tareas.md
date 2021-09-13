@@ -4,7 +4,7 @@
     [] Limpiar comentarios de la rama Master
     [X] Hacer COMMITS cada poco tiempo
     [X] Trabajar en testing y mergear SOLO cuando funcione algo
-    [] Funciones ARROW llamadas handle...
+    [X] Funciones ARROW llamadas handle...
     [] Mejorar el README
     [X]Añadir que se active la búsqueda con INTRO(se activa por defecto)
     [X] Dividir el JS
@@ -35,7 +35,7 @@
     [X] Al arrancar la página de nuevo, solicitar los datos => localStorage.getItem()
     [X] Pintar lista de favoritos con los datos obtenidos
 [] BONUS: BORRAR FAVORITOS
-    [] Escuchar el evento click en el botón-Aspa
+    [X] Escuchar el evento click en el botón-Aspa
     [X] Eliminar de la lista de favoritos (no solo la info, tb del html)
     [X] Cuando haya más de 1 elemento en la lista, que aparezca un botón de eliminar todos
 [X] BONUS: AFINAR LA MAQUETACIÓN
