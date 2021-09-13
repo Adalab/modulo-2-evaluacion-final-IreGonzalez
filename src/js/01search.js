@@ -46,7 +46,6 @@ function paintSeries() {
     }
     //introducimos los datos de la constante html en el elemento correspondiente del html
     seriesList.innerHTML = html;
-
     listenerSelection();
 };
 
