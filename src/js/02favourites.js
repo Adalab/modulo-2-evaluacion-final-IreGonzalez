@@ -75,6 +75,7 @@ function paintFavList(favSelected) {
     favouriteList.innerHTML = htmlFav;
     //Escuchamos los objetos seleccionados para ser eliminados 
     listenerRemove();
+    addReset();
 }
 
 
