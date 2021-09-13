@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px;
     padding: 20px;
-    background-color: $background;
+    background-color: $white;
     min-height: 100vh;
+    font-family: $font-main;
 }

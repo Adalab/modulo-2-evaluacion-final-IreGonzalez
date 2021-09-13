@@ -14,15 +14,16 @@
     column-gap: 15px;
 
     &__input{
-        background-color: $inputbackground;
+        background-color: $lightbrown;
         height: 35px;
+        border-radius: 5px;
         text-align: center;
-        color: $inputcolor;
+        color: $brown;
         font-size: 18px;
-        ::placeholder{
-            color: $placeholdercolor;
+        &::placeholder{
+            color: $yellow;
         }
-    }
+        }
     &__button{
         @include button;
     }
@@ -47,17 +48,23 @@
     gap: 10px;
         &--image{
             @include series__image;
-            background-color: $light1;
+            background-color: $lightbrown;
+            &:hover{
+                background-color: $redbrown;
+            }
             &__clicked{
                 @include series__image;
-                background-color: $light2;
+                background-color: $redbrown;
+                &:hover{
+                    background-color: $lightbrown;
+                }
             }
         }
         &--series{
-            color: $light1;
+            color: $lightbrown;
             margin-bottom: 20px;
             &__clicked{
-                color: $light2;
+                color: $redbrown;
                 margin-bottom: 20px;
             }
         }
@@ -67,7 +74,7 @@
 .favourites__title{
     grid-column: 1/2;
     text-align: center;
-    color: $light1;
+    color: $lightbrown;
     font-weight: bolder;
     border-bottom: solid black 2px;
     margin-top: 10px;
@@ -97,11 +104,11 @@
                 height: 70px;
                 width: 50px;
                 margin: auto;
-                background-color:$light1;
+                background-color:$lightbrown;
                 padding: 2px;
             }
             &--series{
-                color: $light1;
+                color: $lightbrown;
                 padding: 5px;
                 text-align: center;
             }
@@ -110,14 +117,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $light1;
+        color: $lightbrown;
         font-size: 10px;
         width: 20px;
         height: 20px;
-        background-color: $buttoncolor;
+        background-color: $brown;
         border-radius: 50%;
         &:hover{
-            color: unset;
+            background-color: $yellow;
         }
     }
     &__reset{

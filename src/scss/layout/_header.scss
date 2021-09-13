@@ -3,9 +3,10 @@
     grid-column: 1/4 ;
 
     &__title{
+        font-family: $font_title;
     text-align: center;
     font-size: 30px;
-    color:  $light1;
+    color:  $lightbrown;
     font-weight: bolder;
 }
 }

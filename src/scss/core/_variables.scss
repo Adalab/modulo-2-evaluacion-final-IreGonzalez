@@ -1,13 +1,13 @@
 // fonts
-
+$font_title: 'Bodoni Moda', serif;
+$font-main: 'Lato', sans-serif;
 // colors
-$light1: rgb(207, 204, 204);
-$light2:  rgb(163, 19, 43);
-$background: rgb(77, 5, 5);
-$inputbackground: rgb(82, 70, 70);
-$inputcolor: rgb(31, 11, 12);
-$placeholdercolor: rgb(14, 11, 11);
-$buttoncolor: rgb(32, 32, 32);
+$white :rgb(255, 223, 143) ;
+$yellow: rgb(255, 182, 0);
+$lightbrown: rgb(205, 107, 0);
+$orange: rgb(255, 80, 1);
+$redbrown:  rgb(149, 37, 15);
+$brown: rgb(71, 36, 8);
 
 //Mixins
 @mixin series__image{
@@ -18,10 +18,15 @@ $buttoncolor: rgb(32, 32, 32);
 
 @mixin button{
     height: 15px;
-        width: 8ch;
-        background-color: $buttoncolor;
-        border-radius: 5px;
-        box-sizing: content-box;
-        padding: 10px;
-        color: $light1;
+    width: 8ch;
+    background-color: $brown;
+    border-radius: 5px;
+    box-sizing: content-box;
+    padding: 10px;
+    font-weight: bold;
+    color: $orange;
+    &:hover{
+        background-color: $lightbrown;
+        color: $yellow;
+    };
 }
