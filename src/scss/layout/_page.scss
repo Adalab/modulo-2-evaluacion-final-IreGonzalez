@@ -59,11 +59,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    @mixin series__image{
-        height: 101px;
-        width: 69px;
-        padding: 5px;
-    }
+    
         &--image{
             @include series__image;
             background-color: $lightbrown;
@@ -82,9 +78,11 @@
         &--series{
             color: $lightbrown;
             margin-bottom: 20px;
+            font-weight: bold;
             &__clicked{
                 color: $redbrown;
                 margin-bottom: 20px;
+                font-weight: bold;
             }
         }
     }
@@ -96,6 +94,7 @@
     &--title{
         text-align: center;
         font-weight: bolder;
+        font-size: 2em;
         color: $lightbrown;
         margin: auto;
         padding-bottom: 5px;
@@ -104,8 +103,8 @@
     
     &--reset{
         margin: auto;
-        font-size: 13px;
-        height: 13px;
+        font-size: 15px;
+        height: 15px;
         width: 6ch;
         padding: 8px;
         border-radius: 5px;
@@ -120,10 +119,10 @@
     grid-row: 3;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 180px 180px;
+    grid-template-rows: 250px 250px;
     flex-direction: column;
     row-gap: 10px;
-    margin-bottom: 70px;
+    margin-bottom: 90px;
     border-right: solid $brown 1px;
 
     @media (min-width: 768px){
@@ -147,8 +146,8 @@
             background-color:$lightbrown;
             padding: 2px;
             @media  (min-width: 768px){
-                height: 75px;
-                width: 51px;
+                height: 112px;
+                width: 76px;
             }
         }
         &--series{
@@ -167,6 +166,7 @@
         height: 20px;
         background-color: $brown;
         border-radius: 50%;
+        margin-bottom: 5px;
         &:hover{
             background-color: $yellow;
         }

@@ -8,6 +8,7 @@
 const input = document.querySelector('.js_input');
 //Activar la búsqueda realizada
 const buttonSearch = document.querySelector('.js_button');
+const buttonLog = document.querySelector('.js_log');
 //Lugar donde pintar la lista creada por los elementos de la búsqueda
 const seriesList = document.querySelector('.js_list')
 //Lista a rellenar con los datos de la búsqueda

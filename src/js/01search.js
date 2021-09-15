@@ -23,6 +23,7 @@ function paintSeries() {
         const id = search.show.id;
         const title = search.show.name;
         const image = search.show.image;
+        const hour = search.show.schedule.time;
         //Añadir la clase a los elementos seleccionados como favoritos
         const insertFavClass = searchFavourites(search);
         if (insertFavClass) {
@@ -41,6 +42,12 @@ function paintSeries() {
         else {
             html += `<img class="list__elements--image${favClass}" src="${image.original}" alt="Cartel de la serie"></img>`;
         }
+        if (hour === '') {
+            html += `<p class="list__elements--series${favClass} ">Sin emisión</p>`;
+        }
+        else {
+            html += `<p class="list__elements--series${favClass} ">${hour}</p>`;
+        }
         html += `<p class="list__elements--series${favClass} ">${title}</p>`;
         html += `</li>`;
     }
@@ -48,6 +55,14 @@ function paintSeries() {
     seriesList.innerHTML = html;
     listenerSelection();
 };
+
+function handleLog(ev) {
+    ev.preventDefault();
+    for (const serie of series) {
+        console.log(serie.show.name);
+    }
+
+}
 
 function handleSearchSeries(event) {
     //Evitamos que se recargue la página al activar el botón de búsqueda
@@ -59,6 +74,7 @@ function handleSearchSeries(event) {
         .then(response => response.json())
         .then(data => {
             series = data;
+            //Crear un nuevo array con los datos que necesitamos con un for y un push o directamente con un map***************
             //Al hacer la petición se ejecuta la función que pinta la búsqueda realizada en pantalla
             paintSeries();
         })
