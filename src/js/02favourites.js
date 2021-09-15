@@ -18,21 +18,12 @@ function handleFavSelect(event) {
         //Añadimos al array "favourites" el elemento seleccionado
         const favouriteListCreator = favourites.push(favouriteSelection);
         //Pintamos la lista de favoritos
-        paintFavList(favSelected);
-        //Actualizamos el localStorage
-        savedFavList();
+        paintFavList();
     }
     else {
         //Eliminamos del Array el elemento seleccionado
         favourites.splice(favouritesFound, 1);
-        //Actualizamos el localStorage
-        savedFavList();
-
-        favouriteList.innerHTML = '';
-        //Recorremos todo el array para poder volver a pintarlo actualizado
-        for (const favSelected of favourites) {
-            paintFavList(favSelected)
-        }
+        paintFavList();
     }
     //Actualizamos la lista principal de "series" para añadir la clase de resalte
     paintSeries();
@@ -43,7 +34,7 @@ function handleFavSelect(event) {
 }
 
 
-function paintFavList(favSelected) {
+function paintFavList() {
     //Variable en la que se almacenarán los datos html de "favourites"
     let htmlFav = '';
     //Reseteamos la lista cada vez que se produzca una modificación
@@ -75,6 +66,10 @@ function paintFavList(favSelected) {
     favouriteList.innerHTML = htmlFav;
     //Escuchamos los objetos seleccionados para ser eliminados 
     listenerRemove();
+    //Actualizamos el localStorage
+    savedFavList();
+    //Actualizamos el localStorage
+    savedFavList();
 }
 
 

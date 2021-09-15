@@ -74,6 +74,7 @@ function handleSearchSeries(event) {
         .then(response => response.json())
         .then(data => {
             series = data;
+            //Crear un nuevo array con los datos que necesitamos con un for y un push o directamente con un map***************
             //Al hacer la petición se ejecuta la función que pinta la búsqueda realizada en pantalla
             paintSeries();
         })
