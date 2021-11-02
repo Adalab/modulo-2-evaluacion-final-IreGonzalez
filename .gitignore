@@ -1,9 +1,9 @@
 # Created by https://www.gitignore.io/api/sass,node,bower,macos
 
 # Enunciado y Tareas
-Promo_N_Modulo_2_Ev_final
-evaluacion-modulo-2-especificaciones
-lista-tareas
+/Promo_N_Modulo_2_Ev_final
+/evaluacion-modulo-2-especificaciones
+/lista-tareas
 
 # Bower
 bower_components
